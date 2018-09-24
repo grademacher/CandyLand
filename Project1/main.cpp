@@ -28,6 +28,10 @@ int main(int argc, const char* argv[])
   test_deck->push_back(1); //lollypop -- 16
   test_deck->push_back(1); //icecream -- 17
   Deck* my_deck = new Deck(test_deck);
+
+  for (int i = 0; i < 100; i++) {
+    std::cout << my_deck->DrawCard() << "\n";
+  }
   std::getchar();
 }
 

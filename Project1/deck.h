@@ -10,10 +10,12 @@ public:
   int DrawCard();
 
 private:
-  int total_cards;
-  int cards_left;
-  int used_cards;
+  int current_idex;
 
   std::vector<int>* my_deck;
+
+  void Shuffle();
+  void Print();
+
 };
 
