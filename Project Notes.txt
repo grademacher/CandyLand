@@ -1,0 +1,9 @@
+Project Notes
+
+GameBoard class is an array of GameTile
+
+GameTile contains number correlating to color
+Contains number of jump location (0 if no jump)
+Contains whether or not player loses turn
+
+test
