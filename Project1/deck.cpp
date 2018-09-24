@@ -13,7 +13,7 @@ Deck::Deck(std::vector<int>* deck_layout)
     }
   }
 
-  //print out the deck
+  //print out the deck hi
   for (int i = 0; i < my_deck->size(); i++) {
     std::cout << my_deck->at(i) << " ";
   }
