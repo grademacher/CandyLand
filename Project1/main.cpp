@@ -3,6 +3,8 @@
 #include <iostream>
 #include "deck.h"
 #include <vector>
+#include "gameboard.h"
+#include "gametile.h"
 
 int main(int argc, const char* argv[])
 {
@@ -28,6 +30,8 @@ int main(int argc, const char* argv[])
   test_deck->push_back(1); //lollypop -- 16
   test_deck->push_back(1); //icecream -- 17
   Deck* my_deck = new Deck(test_deck);
+
+  GameBoard* final_board = new GameBoard();
 
   std::getchar();
 }
