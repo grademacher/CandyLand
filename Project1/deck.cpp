@@ -47,7 +47,7 @@ int Deck::DrawCard() {
 
 //do an in place shuffle on the deck using modified Fisher-Yates
 void Deck::Shuffle() {
-  for (int i = 0; i < my_deck->size() - 2; i++) {
+  for (int i = 0; i < my_deck->size() - 1; i++) {
     // obtain a random number from hardware
     std::random_device rd;
     // seed the Mersenne Twister pseudo-random generator
