@@ -138,12 +138,100 @@ void GameBoard::construct_board() {
 	board.push_back(temp_49);
 	board.push_back(temp_50);
 
+	//section 9
+	GameTile* temp_51 = new GameTile(0, 0, 0); 
+	GameTile* temp_52 = new GameTile(1, 0, 0);
+	GameTile* temp_53 = new GameTile(2, 0, 0);
+	GameTile* temp_54 = new GameTile(3, 0, 0);
+	GameTile* temp_55 = new GameTile(4, 0, 0);
+	GameTile* temp_56 = new GameTile(5, 0, 0);
+
+	board.push_back(temp_51);
+	board.push_back(temp_52);
+	board.push_back(temp_53);
+	board.push_back(temp_54);
+	board.push_back(temp_55);
+	board.push_back(temp_56);
+
+	//section 10
+	GameTile* temp_57 = new GameTile(0, 0, 0);
+	GameTile* temp_58 = new GameTile(1, 0, 0);
+	GameTile* temp_59 = new GameTile(2, 0, 0);
+	GameTile* temp_60 = new GameTile(3, 0, 0);
+	GameTile* temp_61 = new GameTile(4, 0, 0);
+	GameTile* temp_62 = new GameTile(5, 0, 0);
+
+	board.push_back(temp_57);
+	board.push_back(temp_58);
+	board.push_back(temp_59);
+	board.push_back(temp_60);
+	board.push_back(temp_61);
+	board.push_back(temp_62);
+
+	//section 11
+	GameTile* temp_63 = new GameTile(0, 0, 0);
+	GameTile* temp_64 = new GameTile(1, 0, 0);
+	GameTile* temp_65 = new GameTile(2, 0, 0);
+	GameTile* temp_66 = new GameTile(3, 0, 0);
+	GameTile* temp_67 = new GameTile(4, 0, 0);
+	GameTile* temp_68 = new GameTile(6, 0, 0); //peanut
+	GameTile* temp_69 = new GameTile(5, 0, 0);
+
+	board.push_back(temp_63);
+	board.push_back(temp_64);
+	board.push_back(temp_65);
+	board.push_back(temp_66);
+	board.push_back(temp_67);
+	board.push_back(temp_68);
+	board.push_back(temp_69);
+
+	//section 12
+	GameTile* temp_70 = new GameTile(0, 0, 0);
+	GameTile* temp_71 = new GameTile(1, 0, 0);
+	GameTile* temp_72 = new GameTile(2, 0, 0);
+	GameTile* temp_73 = new GameTile(3, 0, 0);
+	GameTile* temp_74 = new GameTile(4, 0, 0);
+	GameTile* temp_75 = new GameTile(5, 0, 0);
+
+	board.push_back(temp_70);
+	board.push_back(temp_71);
+	board.push_back(temp_72);
+	board.push_back(temp_73);
+	board.push_back(temp_74);
+	board.push_back(temp_75);
+
+	//section 13
+	GameTile* temp_76 = new GameTile(0, 0, 0);
+	GameTile* temp_77 = new GameTile(1, 0, 0);
+	GameTile* temp_78 = new GameTile(2, 0, 0);
+	GameTile* temp_79 = new GameTile(3, 0, 0);
+	GameTile* temp_80 = new GameTile(4, 0, 0);
+	GameTile* temp_81 = new GameTile(5, 0, 0);
+
+	board.push_back(temp_76);
+	board.push_back(temp_77);
+	board.push_back(temp_78);
+	board.push_back(temp_79);
+	board.push_back(temp_80);
+	board.push_back(temp_81);
+
+	//section 14
+	GameTile* temp_82 = new GameTile(0, 0, 0);
+	GameTile* temp_83 = new GameTile(1, 0, 0);
+	GameTile* temp_84 = new GameTile(2, 0, 0);
+	GameTile* temp_85 = new GameTile(3, 0, 1); //turn loss
+	GameTile* temp_86 = new GameTile(4, 0, 0);
+	GameTile* temp_87 = new GameTile(5, 0, 0);
+
+	board.push_back(temp_82);
+	board.push_back(temp_83);
+	board.push_back(temp_84);
+	board.push_back(temp_85);
+	board.push_back(temp_86);
+	board.push_back(temp_87);
 
 
-
-
-
-
+	   	 
 
 
 
