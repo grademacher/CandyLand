@@ -230,6 +230,56 @@ void GameBoard::construct_board() {
 	board.push_back(temp_86);
 	board.push_back(temp_87);
 
+	//section 15
+	GameTile* temp_88 = new GameTile(0, 0, 0);
+	GameTile* temp_89 = new GameTile(1, 0, 0);
+	GameTile* temp_90 = new GameTile(2, 0, 0);
+	GameTile* temp_91 = new GameTile(6, 0, 0); //lollipop
+	GameTile* temp_92 = new GameTile(3, 0, 0);
+	GameTile* temp_93 = new GameTile(4, 0, 0);
+	GameTile* temp_94 = new GameTile(5, 0, 0);
+
+	board.push_back(temp_88);
+	board.push_back(temp_89);
+	board.push_back(temp_90);
+	board.push_back(temp_91);
+	board.push_back(temp_92);
+	board.push_back(temp_93);
+	board.push_back(temp_94);
+
+	//section 16
+	GameTile* temp_95 = new GameTile(0, 0, 0);
+	GameTile* temp_96 = new GameTile(1, 0, 0);
+	GameTile* temp_97 = new GameTile(2, 0, 0);
+	GameTile* temp_98 = new GameTile(3, 0, 0); 
+	GameTile* temp_99 = new GameTile(4, 0, 0);
+	GameTile* temp_100 = new GameTile(5, 0, 0);
+	GameTile* temp_101 = new GameTile(6, 0, 0); //ice cream
+
+	board.push_back(temp_95);
+	board.push_back(temp_96);
+	board.push_back(temp_97);
+	board.push_back(temp_98);
+	board.push_back(temp_99);
+	board.push_back(temp_100);
+	board.push_back(temp_101);
+
+	//section 17
+	GameTile* temp_102 = new GameTile(0, 0, 0);
+	GameTile* temp_103 = new GameTile(1, 0, 0);
+	GameTile* temp_104 = new GameTile(2, 0, 0);
+	GameTile* temp_105 = new GameTile(3, 0, 0);
+	GameTile* temp_106 = new GameTile(4, 0, 0);
+	GameTile* temp_107 = new GameTile(5, 0, 0);
+
+	board.push_back(temp_102);
+	board.push_back(temp_103);
+	board.push_back(temp_104);
+	board.push_back(temp_105);
+	board.push_back(temp_106);
+	board.push_back(temp_107);
+
+
 
 	   	 
 
