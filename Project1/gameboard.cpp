@@ -139,7 +139,7 @@ void GameBoard::construct_board() {
 	board.push_back(temp_50);
 
 	//section 9
-	GameTile* temp_51 = new GameTile(0, 0, 0); 
+	GameTile* temp_51 = new GameTile(0, 0, 0);
 	GameTile* temp_52 = new GameTile(1, 0, 0);
 	GameTile* temp_53 = new GameTile(2, 0, 0);
 	GameTile* temp_54 = new GameTile(3, 0, 0);
@@ -251,7 +251,7 @@ void GameBoard::construct_board() {
 	GameTile* temp_95 = new GameTile(0, 0, 0);
 	GameTile* temp_96 = new GameTile(1, 0, 0);
 	GameTile* temp_97 = new GameTile(2, 0, 0);
-	GameTile* temp_98 = new GameTile(3, 0, 0); 
+	GameTile* temp_98 = new GameTile(3, 0, 0);
 	GameTile* temp_99 = new GameTile(4, 0, 0);
 	GameTile* temp_100 = new GameTile(5, 0, 0);
 	GameTile* temp_101 = new GameTile(6, 0, 0); //ice cream
@@ -279,17 +279,78 @@ void GameBoard::construct_board() {
 	board.push_back(temp_106);
 	board.push_back(temp_107);
 
+	//section 18
+	GameTile* temp_108 = new GameTile(0, 0, 0);
+	GameTile* temp_109 = new GameTile(1, 0, 0);
+	GameTile* temp_110 = new GameTile(2, 0, 0);
+	GameTile* temp_111 = new GameTile(3, 0, 0);
+	GameTile* temp_112 = new GameTile(4, 0, 0);
+	GameTile* temp_113 = new GameTile(5, 0, 0);
 
+	board.push_back(temp_108);
+	board.push_back(temp_109);
+	board.push_back(temp_110);
+	board.push_back(temp_111);
+	board.push_back(temp_112);
+	board.push_back(temp_113);
 
-	   	 
+	//section 19
+	GameTile* temp_114 = new GameTile(0, 0, 0);
+	GameTile* temp_115 = new GameTile(1, 0, 0);
+	GameTile* temp_116 = new GameTile(2, 0, 1); //turn loss
+	GameTile* temp_117 = new GameTile(3, 0, 0);
+	GameTile* temp_118 = new GameTile(4, 0, 0);
+	GameTile* temp_119 = new GameTile(5, 0, 0);
 
+	board.push_back(temp_114);
+	board.push_back(temp_115);
+	board.push_back(temp_116);
+	board.push_back(temp_117);
+	board.push_back(temp_118);
+	board.push_back(temp_119);
 
+	//section 20
+	GameTile* temp_120 = new GameTile(0, 0, 0);
+	GameTile* temp_121 = new GameTile(1, 0, 0);
+	GameTile* temp_122 = new GameTile(2, 0, 0);
+	GameTile* temp_123 = new GameTile(3, 0, 0);
+	GameTile* temp_124 = new GameTile(4, 0, 0);
+	GameTile* temp_125 = new GameTile(5, 0, 0);
 
+	board.push_back(temp_120);
+	board.push_back(temp_121);
+	board.push_back(temp_122);
+	board.push_back(temp_123);
+	board.push_back(temp_123);
+	board.push_back(temp_125);
 
+	//section 21
+	GameTile* temp_126 = new GameTile(0, 0, 0);
+	GameTile* temp_127 = new GameTile(1, 0, 0);
+	GameTile* temp_128 = new GameTile(2, 0, 0);
+	GameTile* temp_129 = new GameTile(3, 0, 0);
+	GameTile* temp_130 = new GameTile(4, 0, 0);
+	GameTile* temp_131 = new GameTile(5, 0, 0);
 
+	board.push_back(temp_126);
+	board.push_back(temp_127);
+	board.push_back(temp_128);
+	board.push_back(temp_129);
+	board.push_back(temp_130);
+	board.push_back(temp_131);
+
+	//section 22
+	GameTile* temp_132 = new GameTile(0, 0, 0) :
+
+	board.push_back(temp_132);
+
+	
+	//instead of adding another tile. Just check if you cannot find the next tile with the card you drew, then you win.
+
+	//add ID for every tile. start from 0. should go to 132. 
 	std::cout << "\n\n";
 	for (int i = 0; i < board.size(); i++) {
 		//add in id assignment here
-		std::cout << "Board Spot " << i << ": " << board.at(i)->get_color() << std::endl << std::endl;
+		std::cout << "ID: [insert] Board Spot " << i << ": " << board.at(i)->get_color() << std::endl << std::endl;
 	}
 }
