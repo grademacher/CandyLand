@@ -1,9 +1,11 @@
 #pragma once
 #include "gameboard.h"
+#include "deck.h"
+
 class Player
 {
 public:
-  Player(GameBoard* this_board);
+  Player(GameBoard* this_board, Deck* deck);
   ~Player();
 
   bool MovePlayer();
@@ -15,5 +17,6 @@ private:
   int player_id;
 
   GameBoard* board;
+  Deck* deck;
 };
 
