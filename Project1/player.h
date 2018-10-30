@@ -18,5 +18,8 @@ private:
 
   GameBoard* board;
   Deck* deck;
+
+  int ConvertColor(int card);
+  bool IsDouble(int card);
 };
 

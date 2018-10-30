@@ -340,7 +340,7 @@ void GameBoard::construct_board() {
 	board.push_back(temp_131);
 
 	//section 22
-	GameTile* temp_132 = new GameTile(0, 0, 0) :
+  GameTile* temp_132 = new GameTile(0, 0, 0);
 
 	board.push_back(temp_132);
 
