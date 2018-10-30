@@ -11,6 +11,8 @@ public:
 	int get_color();
 	int get_jump();
 	int get_turn();
+	int get_id();
+	void set_id(int num);
 
 private:
 	//0 = red, 1 = purple, 2 = yellow, 3 = blue, 4 = orange, 5 = green, 6 = pink
@@ -18,6 +20,7 @@ private:
 	int color;
 	int jump;
 	int turn_loss;
+	int id;
 
 
 };
