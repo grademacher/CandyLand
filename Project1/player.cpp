@@ -16,7 +16,11 @@ Player::~Player()
 }
 
 bool Player::MovePlayer() {
+<<<<<<< HEAD
   //if the player is blocked from their turn, skip them
+=======
+  //if the player is blocked from their turn, skip themm
+>>>>>>> 0384f6180db7507afbd28be36e23da002bc47571
   if (delayed_turn) { delayed_turn = false; return true; }
   //draw a new card
   int current_move = deck->DrawCard();
@@ -61,6 +65,7 @@ bool Player::MovePlayer() {
 }
 
 int Player::ConvertColor(int card) {
+
   //0 = red, 1 = purple, 2 = yellow, 3 = blue, 4 = orange, 5 = green, 6 = pink
   if (card == 0 || card == 1) {
     return 0;
@@ -93,4 +98,5 @@ bool Player::IsDouble(int card) {
   else {
     return false;
   }
+
 }
