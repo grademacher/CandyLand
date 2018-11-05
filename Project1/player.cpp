@@ -17,7 +17,7 @@ Player::~Player()
 
 bool Player::MovePlayer() {
   //if the player is blocked from their turn, skip them
-  if (delayed_turn) { delayed_turn = false; return; }
+  if (delayed_turn) { delayed_turn = false; return true; }
   //draw a new card
   int current_move = deck->DrawCard();
 
@@ -43,8 +43,15 @@ bool Player::MovePlayer() {
 
   //determine what spot to move to
   for (int i = current_tile; i < board->board.size(); i++) {
+    int spots_found = 0;
     if (board->board.at(i)->get_color() == ConvertColor(current_move)) {
+      spots_found++;
+      if (IsDouble(current_move) && (spots_found < 2)) {
+        //continue on in the search
+      }
+      else {
 
+      }
     }
   }
   //update the current tile to reflect the current spot
@@ -54,9 +61,36 @@ bool Player::MovePlayer() {
 }
 
 int Player::ConvertColor(int card) {
-
+  //0 = red, 1 = purple, 2 = yellow, 3 = blue, 4 = orange, 5 = green, 6 = pink
+  if (card == 0 || card == 1) {
+    return 0;
+  }
+  else if (card == 2 || card == 3) {
+    return 4;
+  }
+  else if (card == 4 || card == 5) {
+    return 2;
+  }
+  else if (card == 6 || card == 7) {
+    return 5;
+  }
+  else if (card == 8 || card == 9) {
+    return 3;
+  }
+  else if (card == 10 || card == 11) {
+    return 1;
+  }
+  else {
+    //shouldnt get here, if this happens we are all fucked
+    return -1;
+  }
 }
 
 bool Player::IsDouble(int card) {
-
+  if (card == 1 || card == 3 || card == 5 || card == 7 || card == 9 || card == 11) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
