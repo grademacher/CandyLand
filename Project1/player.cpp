@@ -16,11 +16,9 @@ Player::~Player()
 }
 
 bool Player::MovePlayer() {
-<<<<<<< HEAD
+
   //if the player is blocked from their turn, skip them
-=======
-  //if the player is blocked from their turn, skip themm
->>>>>>> 0384f6180db7507afbd28be36e23da002bc47571
+
   if (delayed_turn) { delayed_turn = false; return true; }
   //draw a new card
   int current_move = deck->DrawCard();
@@ -54,14 +52,16 @@ bool Player::MovePlayer() {
         //continue on in the search
       }
       else {
-
+        //set the player board index
+        current_tile = i;
+        return true;
       }
     }
   }
   //update the current tile to reflect the current spot
-  //update the gameboard to reflect the player moving
 
-  return true;
+  //no tile was found, the player must have reached the end of the board
+  return false;
 }
 
 int Player::ConvertColor(int card) {
