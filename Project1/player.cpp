@@ -18,29 +18,35 @@ Player::~Player()
 bool Player::MovePlayer() {
 
   //if the player is blocked from their turn, skip them
-
   if (delayed_turn) { delayed_turn = false; return true; }
+
   //draw a new card
   int current_move = deck->DrawCard();
 
   //check for special cards first
   if (current_move == 12) { //gingerbread
     current_tile = 8;
+    return true;
   }
   else if (current_move == 13) { //candycane
     current_tile = 19;
+    return true;
   }
   else if (current_move == 14) { //gumdrop
     current_tile = 41;
+    return true;
   }
   else if (current_move == 15) { //peanut
     current_tile = 68;
+    return true;
   }
   else if (current_move == 16) { //lollypop
     current_tile = 91;
+    return true;
   }
   else if (current_move == 17) { //icecream
     current_tile = 101;
+    return true;
   }
 
   //determine what spot to move to
@@ -54,6 +60,12 @@ bool Player::MovePlayer() {
       else {
         //set the player board index
         current_tile = i;
+        if (board->board[i]->get_jump() > 0) { //player landed on a jump tile
+          current_tile = board->board[i]->get_jump();
+        }
+        if (board->board[i]->get_turn() > 0) { //player landed on a tile that will skip their turn next time
+          delayed_turn = true;
+        }
         return true;
       }
     }
