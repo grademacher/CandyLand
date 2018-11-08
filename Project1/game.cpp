@@ -52,12 +52,12 @@ std::vector<int> Game::play_game() {
 	while (game_running) { //go duration of game
 		for (int i = 0; i < players.size(); i++) {
 			if (game_running) { //ensure you don't finish turns after player wins
-				std::cout << "Player " << i << " turn" << std::endl;
+				//std::cout << "Player " << i << " turn" << std::endl;
 				game_running = players.at(i)->MovePlayer();
 				if (!game_running) {
 					values.push_back(i); //add winner to vector
 					winner = i;
-					std::cout << "Winner is Player " << i << std::endl;
+					//std::cout << "Winner is Player " << i << std::endl;
 				}
 			}
 		}
