@@ -16,9 +16,10 @@ Player::~Player()
 }
 
 bool Player::MovePlayer() {
+  std::cout << "Starting square: " << current_tile << "\n";
 
   //if the player is blocked from their turn, skip them
-  if (delayed_turn) { delayed_turn = false; return true; }
+  if (delayed_turn) { delayed_turn = false; std::cout << "Ending square: " << current_tile << "\n"; true; }
 
   //draw a new card
   int current_move = deck->DrawCard();
@@ -26,26 +27,32 @@ bool Player::MovePlayer() {
   //check for special cards first
   if (current_move == 12) { //gingerbread
     current_tile = 8;
+    std::cout << "Ending square: " << current_tile << "\n";
     return true;
   }
   else if (current_move == 13) { //candycane
     current_tile = 19;
+    std::cout << "Ending square: " << current_tile << "\n";
     return true;
   }
   else if (current_move == 14) { //gumdrop
     current_tile = 41;
+    std::cout << "Ending square: " << current_tile << "\n";
     return true;
   }
   else if (current_move == 15) { //peanut
     current_tile = 68;
+    std::cout << "Ending square: " << current_tile << "\n";
     return true;
   }
   else if (current_move == 16) { //lollypop
     current_tile = 91;
+    std::cout << "Ending square: " << current_tile << "\n";
     return true;
   }
   else if (current_move == 17) { //icecream
     current_tile = 101;
+    std::cout << "Ending square: " << current_tile << "\n";
     return true;
   }
 
@@ -66,6 +73,7 @@ bool Player::MovePlayer() {
         if (board->board[i]->get_turn() > 0) { //player landed on a tile that will skip their turn next time
           delayed_turn = true;
         }
+        std::cout << "Ending square: " << current_tile << "\n";
         return true;
       }
     }

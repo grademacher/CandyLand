@@ -21,7 +21,7 @@ Deck::Deck(std::vector<int>* deck_layout)
   }
 
   //print out the deck
-  Print();
+  //Print();
 
   //shuffle the deck
   Shuffle();
@@ -58,7 +58,7 @@ void Deck::Shuffle() {
     std::swap(my_deck->at(i), my_deck->at(distr(eng)));
   }
 
-  Print();
+  //Print();
 }
 
 void Deck::Print() {

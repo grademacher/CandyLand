@@ -353,8 +353,8 @@ void GameBoard::construct_board() {
 	//instead of adding another tile. Just check if you cannot find the next tile with the card you drew, then you win.
 
 	//add ID for every tile. start from 0. should go to 132. 
-	std::cout << "\n\n";
-	for (int i = 0; i < board.size(); i++) {
-		std::cout << "ID: " << board.at(i)->get_id() << " Board Spot " << i << ": " << board.at(i)->get_color() << std::endl << std::endl;
-	}
+	//std::cout << "\n\n";
+	//for (int i = 0; i < board.size(); i++) {
+		//std::cout << "ID: " << board.at(i)->get_id() << " Board Spot " << i << ": " << board.at(i)->get_color() << std::endl << std::endl;
+	//}
 }
