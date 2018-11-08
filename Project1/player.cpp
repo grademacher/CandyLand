@@ -15,14 +15,21 @@ Player::~Player()
 {
 }
 
-bool Player::MovePlayer() {
+bool Player::MovePlayer() 
+{
   std::cout << "Starting square: " << current_tile << "\n";
 
   //if the player is blocked from their turn, skip them
-  if (delayed_turn) { delayed_turn = false; std::cout << "Ending square: " << current_tile << "\n"; true; }
+  if (delayed_turn) { 
+	  delayed_turn = false; 
+	  std::cout << "Turn was lost so ending square: " << current_tile << "\n"; 
+	  return true;
+  }
 
   //draw a new card
   int current_move = deck->DrawCard();
+
+  std::cout << "Player drew card of value " << current_move << std::endl;
 
   //check for special cards first
   if (current_move == 12) { //gingerbread
@@ -56,29 +63,39 @@ bool Player::MovePlayer() {
     return true;
   }
 
+  int values_found = 0;
   //determine what spot to move to
-  for (int i = current_tile; i < board->board.size(); i++) {
-    int spots_found = 0;
-    if (board->board.at(i)->get_color() == ConvertColor(current_move)) {
-      spots_found++;
-      if (IsDouble(current_move) && (spots_found < 2)) {
-        //continue on in the search
-      }
-      else {
-        //set the player board index
-        current_tile = i;
-        if (board->board[i]->get_jump() > 0) { //player landed on a jump tile
-          current_tile = board->board[i]->get_jump();
-        }
-        if (board->board[i]->get_turn() > 0) { //player landed on a tile that will skip their turn next time
-          delayed_turn = true;
-        }
-        std::cout << "Ending square: " << current_tile << "\n";
-        return true;
-      }
-    }
+  for (int i = current_tile + 1; i < board->board.size(); i++) {
+	  
+	  if (board->board.at(i)->get_color() == ConvertColor(current_move)) {
+		  
+		  values_found++;
+		  if (!IsDouble(current_move)) {
+			  //set the player board index
+			  current_tile = i;
+			  if (board->board[i]->get_jump() > 0) { //player landed on a jump tile
+				  current_tile = board->board[i]->get_jump();
+			  }
+			  if (board->board[i]->get_turn() > 0) { //player landed on a tile that will skip their turn next time
+				  delayed_turn = true;
+			  }
+			  std::cout << "Ending square: " << current_tile << "\n";
+			  return true;
+		  } else if (IsDouble(current_move) && values_found == 2) {
+			  //set the player board index
+			  current_tile = i;
+			  if (board->board[i]->get_jump() > 0) { //player landed on a jump tile
+				  current_tile = board->board[i]->get_jump();
+			  }
+			  if (board->board[i]->get_turn() > 0) { //player landed on a tile that will skip their turn next time
+				  delayed_turn = true;
+			  }
+			  std::cout << "Ending square: " << current_tile << "\n";
+			  return true;
+		  }
+		  
+	  }
   }
-  //update the current tile to reflect the current spot
 
   //no tile was found, the player must have reached the end of the board
   return false;
