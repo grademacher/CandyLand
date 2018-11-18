@@ -8,13 +8,14 @@ public:
   ~Deck();
   
   int DrawCard();
+  void Shuffle();
 
 private:
   int current_idex;
 
   std::vector<int>* my_deck;
 
-  void Shuffle();
+  
   void Print();
 
 };

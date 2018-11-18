@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <string>
 #include "simulation.h"
 
 int main(int argc, const char* argv[])

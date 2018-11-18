@@ -6,7 +6,7 @@ GameBoard::GameBoard() {
 
 
 GameBoard::~GameBoard() {
-
+  
 }
 
 void GameBoard::construct_board() {

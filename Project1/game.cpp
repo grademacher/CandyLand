@@ -6,33 +6,14 @@ Game::Game() {
 
 }
 
-Game::Game(int num_play) {
+Game::Game(int num_play, GameBoard* game, Deck* deck) {
 	turns = 0;
 	winner = -1;
 	num_players = num_play;
-	game_board = new GameBoard();
+  game_board = game;
+  my_deck = deck;
 
-	//create deck
-	std::vector<int>* deck = new std::vector<int>();
-	deck->push_back(6); //red 1 -- 0
-	deck->push_back(4); //red 2 -- 1
-	deck->push_back(6); //orange 1 -- 2
-	deck->push_back(3); //orange 2 -- 3
-	deck->push_back(6); //yellow 1 -- 4
-	deck->push_back(4); //yellow 2 -- 5
-	deck->push_back(6); //green 1 -- 6
-	deck->push_back(3); //green 2 -- 7
-	deck->push_back(6); //blue 1 -- 8
-	deck->push_back(4); //blue 2 -- 9
-	deck->push_back(6); //purple 1 -- 10
-	deck->push_back(4); //purple 2 -- 11
-	deck->push_back(1); //gingerbread -- 12
-	deck->push_back(1); //candycane -- 13
-	deck->push_back(1); //gumdrop -- 14
-	deck->push_back(1); //peanut -- 15
-	deck->push_back(1); //lollypop -- 16
-	deck->push_back(1); //icecream -- 17
-	my_deck = new Deck(deck);
+	
 
 	for (int i = 0; i < num_players; i++) {
 		Player* temp = new Player(game_board, my_deck);
@@ -42,7 +23,11 @@ Game::Game(int num_play) {
 
 
 Game::~Game() {
-
+  for (int i = 0; i < players.size(); i++) {
+    delete players.at(i);
+  }
+  
+  
 }
 
 std::vector<int> Game::play_game() {

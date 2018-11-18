@@ -4,6 +4,7 @@
 
 Deck::~Deck()
 {
+  delete my_deck;
 }
 
 Deck::Deck(std::vector<int>* deck_layout)
@@ -47,6 +48,7 @@ int Deck::DrawCard() {
 
 //do an in place shuffle on the deck using modified Fisher-Yates
 void Deck::Shuffle() {
+  current_idex = 0;
   for (int i = 0; i < my_deck->size() - 1; i++) {
     // obtain a random number from hardware
     std::random_device rd;

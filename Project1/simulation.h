@@ -18,5 +18,7 @@ private:
   std::vector<int>* trial_nums;
   std::vector<std::vector<int>>* turns_taken;
   std::vector<std::vector<int>>* winning_players;
+  Deck* my_deck;
+  GameBoard* game_board;
 };
 

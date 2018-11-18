@@ -8,7 +8,7 @@ class Game
 {
 public:
   Game();
-  Game(int num_play);
+  Game(int num_play, GameBoard* game, Deck* deck);
   std::vector<int> play_game();
 
   ~Game();
